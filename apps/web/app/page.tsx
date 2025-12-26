@@ -1,6 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -25,14 +26,30 @@ export default function Home() {
         padding: "2rem",
         fontFamily: "system-ui",
         maxWidth: "800px",
-        margin: "0 auto",
+        margin: "auto",
       }}>
+      <nav
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          marginBottom: "2rem",
+        }}>
+        <Link
+          href="/features"
+          style={{
+            textDecoration: "none",
+            color: "#0070f3",
+            fontWeight: "bold",
+          }}>
+          Features
+        </Link>
+      </nav>
       <div style={{ textAlign: "center", marginTop: "4rem" }}>
         <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
           🧠 GeniusGarage
         </h1>
         <p style={{ fontSize: "1.5rem", color: "#666", marginBottom: "2rem" }}>
-          Store your genius code snippets
+          Manage and share your code snippets
         </p>
 
         {/* Inline Button - we'll extract this to a shared package in Section 1 */}
