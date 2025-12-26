@@ -1,7 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
-//import { Card } from "@/geniusgarage-one/ui/card";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
