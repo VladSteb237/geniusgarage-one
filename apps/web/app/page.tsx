@@ -1,6 +1,7 @@
 import Image, { type ImageProps } from "next/image";
-import styles from "./page.module.css";
+//import styles from "./page.module.css";
 import Link from "next/link";
+import { Button } from "@repo/ui/button";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -52,7 +53,7 @@ export default function Home() {
         </p>
 
         {/* Inline Button - we'll extract this to a shared package in Section 1 */}
-        <button
+        {/* <button
           style={{
             padding: "0.75rem 1.5rem",
             fontSize: "1rem",
@@ -64,7 +65,8 @@ export default function Home() {
             color: "white",
           }}>
           Get Started
-        </button>
+        </button> */}
+        <Button variant="primary">Get Started</Button>
 
         <p style={{ color: "#666", marginTop: "3rem", fontSize: "0.875rem" }}>
           This is the starter project. You'll build out the full platform as you
