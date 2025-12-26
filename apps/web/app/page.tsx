@@ -49,7 +49,7 @@ export default function Home() {
           🧠 GeniusGarage
         </h1>
         <p style={{ fontSize: "1.5rem", color: "#666", marginBottom: "2rem" }}>
-          Manage and share your code snippets
+          Your code snippet library, powered by AI
         </p>
 
         {/* Inline Button - we'll extract this to a shared package in Section 1 */}
