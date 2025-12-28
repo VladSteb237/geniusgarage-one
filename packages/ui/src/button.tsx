@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // import { ReactNode } from "react";
 
@@ -27,34 +27,28 @@ export interface ButtonProps {
 
 export function Button({
   children,
-  onClick,
   variant = "primary",
+  onClick,
 }: ButtonProps) {
   const baseStyles = {
-    padding: "0.75rem 1.5rem",
-    fontSize: "1rem",
-    border: "none",
-    borderRadius: "0.5rem",
-    cursor: "pointer",
+    padding: "12px 24px",
+    borderRadius: "8px",
+    fontSize: "16px",
     fontWeight: "600",
+    border: "none",
+    cursor: "pointer",
+    transition: "all 0.2s ease",
   };
 
   const variantStyles = {
-    primary: {
-      backgroundColor: "#0070f3",
-      color: "white",
-    },
-    secondary: {
-      backgroundColor: "#f5f5f5",
-      color: "#333",
-      border: "1px solid #e5e7eb",
-    },
+    primary: { background: "#2563eb", color: "white" },
+    secondary: { background: "#e5e7eb", color: "#1f2937" },
   };
 
   return (
     <button
-      onClick={onClick}
-      style={{ ...baseStyles, ...variantStyles[variant] }}>
+      style={{ ...baseStyles, ...variantStyles[variant] }}
+      onClick={onClick}>
       {children}
     </button>
   );

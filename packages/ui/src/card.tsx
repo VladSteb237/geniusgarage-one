@@ -8,7 +8,8 @@ export function Card({ title, children }: CardProps) {
     <div
       style={{
         padding: "2rem",
-        border: "1px solid #e5e7eb", // Back to gray
+        //border: "1px solid #e5e7eb", // Back to gray
+        border: "2px solid #ccc", // Darker border
         borderRadius: "0.5rem",
       }}>
       {title && (

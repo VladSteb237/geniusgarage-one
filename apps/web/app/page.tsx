@@ -66,12 +66,21 @@ export default function Home() {
           }}>
           Get Started
         </button> */}
-        <Button variant="primary">Get Started</Button>
+        <Button variant="primary">
+          <Link
+            href="/about"
+            style={{ textDecoration: "none", color: "white" }}>
+            Get Started
+          </Link>
+        </Button>
 
         <p style={{ color: "#666", marginTop: "3rem", fontSize: "0.875rem" }}>
           This is the starter project. You'll build out the full platform as you
           progress through the course.
         </p>
+        <div className="min-h-screen bg-black flex items-center justify-center">
+          <h1 className="text-6xl font-bold text-red-500">TAILWIND WORKS 🔥</h1>
+        </div>
       </div>
     </main>
   );
