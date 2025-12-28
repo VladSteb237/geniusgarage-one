@@ -1,0 +1,15 @@
+                
+ const tagsArray = newSnippet.tags
+                    .split(",")
+                    .map((tag) => tag.trim())
+                    .filter((tag) => tag.length > 0);
+                  const newEntry: Snippet = {
+                    id: snippets.length + 1,
+                    title: newSnippet.title,
+                    language: newSnippet.language,
+                    code: newSnippet.code,
+                    tags: tagsArray,
+                    createdAt: new Date().toLocaleDateString(),
+                  };
+                  setSnippets([...snippets, newEntry]);
+                  setShowModal(false);
