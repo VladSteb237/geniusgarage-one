@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "../../../packages/ui/src/button";
 import { SnippetCard } from "../../../packages/ui/src/snippet-card";
+import { formatDate } from "../../../packages/utils/src/index";
 
 interface Snippet {
   id: number;
@@ -10,7 +11,7 @@ interface Snippet {
   language: string;
   code: string;
   tags: string[];
-  createdAt: string; // Add this field
+  createdAt: Date; // Add this field change to Date
 }
 
 const initialSnippets: Snippet[] = [
@@ -20,7 +21,7 @@ const initialSnippets: Snippet[] = [
     language: "javascript",
     code: "const sum = arr.reduce((acc, n) => acc + n, 0)",
     tags: ["javascript", "array", "functional"],
-    createdAt: "Jan 15, 2026", // Add this
+    createdAt: new Date("2024-01-15"), // Date object
   },
   {
     id: 2,
@@ -31,7 +32,7 @@ const initialSnippets: Snippet[] = [
   return () => clearTimeout(timer)
 }, [])`,
     tags: ["react", "hooks", "typescript"],
-    createdAt: "Feb 20, 2026", // Add this
+    createdAt: new Date("2024-02-20"), // Date object
   },
   {
     id: 3,
@@ -39,7 +40,7 @@ const initialSnippets: Snippet[] = [
     language: "javascript",
     code: "const results = await Promise.all(promises.map(p => p()))",
     tags: ["javascript", "async", "promises"],
-    createdAt: "Mar 10, 2026", // Add this
+    createdAt: new Date("2024-03-10"), // Date object
   },
 ];
 
@@ -71,11 +72,7 @@ export default function Home() {
         .split(",")
         .map((tag) => tag.trim())
         .filter(Boolean),
-      createdAt: new Date().toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      }), // Add this
+      createdAt: new Date(), // Now a Date object
     };
     // Add snippet to snippets array
     setSnippets([...snippets, snippet]);
@@ -176,7 +173,11 @@ export default function Home() {
         {/* TODO: Add grid div that maps over mockSnippets */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {snippets.map((snippet) => (
-            <SnippetCard key={snippet.id} {...snippet} />
+            <SnippetCard
+              key={snippet.id}
+              {...snippet}
+              createdAt={formatDate(snippet.createdAt)}
+            />
           ))}
         </div>
       </div>
