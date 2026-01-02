@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "../../../packages/ui/src/button";
-import { Card } from "../../../packages/ui/src/card";
 import { SnippetCard } from "../../../packages/ui/src/snippet-card";
-import { title } from "process";
 
 interface Snippet {
   id: number;
