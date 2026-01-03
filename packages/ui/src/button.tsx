@@ -47,7 +47,7 @@ export function Button({
 
   return (
     <button
-      // className="bg-blue-500"
+      className="bg-blue-500 bg-gray-200 text-gray-900"
       style={{ ...baseStyles, ...variantStyles[variant] }}
       onClick={onClick}>
       {children}

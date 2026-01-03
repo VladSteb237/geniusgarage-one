@@ -34,7 +34,7 @@ export function CodeBlock({ code, language = "javascript" }: CodeBlockProps) {
       </div>
 
       {/* Code block */}
-      <pre style={{ margin: 0 }}>
+      <pre className="font-mono bg-gray-900" style={{ margin: 0 }}>
         <code>{code}</code>
       </pre>
     </div>

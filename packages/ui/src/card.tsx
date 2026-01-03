@@ -6,6 +6,7 @@ export interface CardProps {
 export function Card({ title, children }: CardProps) {
   return (
     <div
+      className={""}
       style={{
         padding: "2rem",
         //border: "1px solid #e5e7eb", // Back to gray
