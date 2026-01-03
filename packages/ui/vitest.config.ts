@@ -1,0 +1,11 @@
+// TODO: Import defineConfig from 'vitest/config'
+import { defineConfig } from "vitest/config";
+
+// TODO: Export default config with:
+export default defineConfig({
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: ["./src/test/setup.ts"],
+  },
+});

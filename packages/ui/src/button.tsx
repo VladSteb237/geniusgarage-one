@@ -47,6 +47,7 @@ export function Button({
 
   return (
     <button
+      // className="bg-blue-500"
       style={{ ...baseStyles, ...variantStyles[variant] }}
       onClick={onClick}>
       {children}
