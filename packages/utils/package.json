@@ -1,6 +1,7 @@
 {
   "name": "@repo/utils",
   "version": "1.0.0",
+  "private": true,
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
@@ -10,8 +11,8 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@geniusgarage/typescript-config": "workspace:*",
-    "@geniusgarage/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
     "eslint": "^9",
     "typescript": "^5"
   }
