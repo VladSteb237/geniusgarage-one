@@ -24,7 +24,7 @@ export interface ButtonProps {
   onClick?: () => void;
   variant?: "primary" | "secondary";
 }
-
+// Add comment
 export function Button({
   children,
   variant = "primary",
@@ -39,7 +39,6 @@ export function Button({
     cursor: "pointer",
     transition: "all 0.2s ease",
   };
-  // Added comment - hash changes
   // Another comment - hash changes
   const variantStyles = {
     primary: { background: "#2563eb", color: "white" },
