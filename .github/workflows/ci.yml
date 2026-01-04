@@ -1,0 +1,33 @@
+# TODO: Name the workflow "CI"
+name: CI
+# TODO: Set up trigger on:
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+# TODO: Create 'build' job that runs on ubuntu-latest with steps:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run build, lint, and test
+        run: turbo build lint test
