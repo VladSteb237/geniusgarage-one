@@ -106,7 +106,7 @@ export default function ContactPage() {
           </p>
 
           <a
-            href="/"
+            href="/schedule"
             className="mt-8 inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 font-semibold text-black transition hover:bg-orange-400">
             Schedule a call
           </a>
