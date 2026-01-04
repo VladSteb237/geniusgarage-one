@@ -20,6 +20,7 @@ const ThemeImage = (props: Props) => {
 };
 
 export default function Home() {
+  // Changed app code, not packages/ui
   return (
     <main
       style={{

@@ -39,12 +39,13 @@ export function Button({
     cursor: "pointer",
     transition: "all 0.2s ease",
   };
-
+  // Added comment - hash changes
+  // Another comment - hash changes
   const variantStyles = {
     primary: { background: "#2563eb", color: "white" },
     secondary: { background: "#e5e7eb", color: "#1f2937" },
   };
-  // Add comment to invalidate cache
+
   return (
     <button
       className="bg-blue-500 bg-gray-200 text-gray-900"
