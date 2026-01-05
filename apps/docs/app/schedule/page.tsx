@@ -1,8 +1,13 @@
+"use client";
 import { Button } from "@repo/ui/button";
 import { Card } from "@repo/ui/card";
 import Link from "next/link";
 
 export default function Schedule() {
+  function handleClick() {
+    alert("Hello World!!!");
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-4">
@@ -17,7 +22,7 @@ export default function Schedule() {
           <h2 className="text-2xl font-bold mb-4">Button</h2>
           <p className="mb-4">Interactive button component with variants</p>
           <div className="space-y-2">
-            <Button>Primary Button</Button>
+            <Button onClick={handleClick}>Primary Button</Button>
             <Button variant="secondary">
               <Link href="/">Secondary Button</Link>
             </Button>

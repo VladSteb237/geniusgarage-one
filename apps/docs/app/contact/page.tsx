@@ -1,4 +1,7 @@
 "use client";
+
+import Link from "next/link";
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
@@ -105,11 +108,11 @@ export default function ContactPage() {
             We’re happy to discuss your idea and suggest next steps.
           </p>
 
-          <a
+          <Link
             href="/schedule"
             className="mt-8 inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 font-semibold text-black transition hover:bg-orange-400">
             Schedule a call
-          </a>
+          </Link>
         </div>
       </section>
     </main>
