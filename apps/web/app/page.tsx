@@ -34,6 +34,7 @@ export default function Home() {
           display: "flex",
           justifyContent: "flex-end",
           marginBottom: "2rem",
+          gap: "1rem",
         }}>
         <Link
           href="/features"
@@ -43,6 +44,33 @@ export default function Home() {
             fontWeight: "bold",
           }}>
           Features
+        </Link>
+        <Link
+          href="http://localhost:3003"
+          style={{
+            textDecoration: "none",
+            color: "#0070f3",
+            fontWeight: "bold",
+          }}>
+          Admin
+        </Link>
+        <Link
+          href="http://localhost:3001"
+          style={{
+            textDecoration: "none",
+            color: "#0070f3",
+            fontWeight: "bold",
+          }}>
+          Features Docs
+        </Link>
+        <Link
+          href="http://localhost:3002"
+          style={{
+            textDecoration: "none",
+            color: "#0070f3",
+            fontWeight: "bold",
+          }}>
+          Features Snippet Manager
         </Link>
       </nav>
       <div style={{ textAlign: "center", marginTop: "4rem" }}>
