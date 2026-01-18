@@ -65,6 +65,11 @@ export default function Home() {
             className="mt-8 inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 font-semibold text-black transition hover:bg-orange-400">
             About a project
           </a>
+          <a
+            href="http://localhost:3000"
+            className="mt-8 inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 font-semibold text-black transition hover:bg-orange-400 ml-2">
+            Go App Project
+          </a>
         </div>
       </section>
     </main>

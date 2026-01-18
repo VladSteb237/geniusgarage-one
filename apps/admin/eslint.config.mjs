@@ -13,13 +13,6 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
-  // 🔹 Отключаем require для конфигов (Tailwind, PostCSS и т.д.)
-  {
-    files: ["**/*.cjs"],
-    rules: {
-      "@typescript-eslint/no-require-imports": "off",
-    },
-  },
 ]);
 
 export default eslintConfig;

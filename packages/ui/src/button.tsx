@@ -22,9 +22,9 @@
 export interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "danger"; // Add 'danger' variant
 }
-
+// Add comment
 export function Button({
   children,
   variant = "primary",
@@ -39,12 +39,13 @@ export function Button({
     cursor: "pointer",
     transition: "all 0.2s ease",
   };
-
+  // Another comment - hash changes
   const variantStyles = {
     primary: { background: "#2563eb", color: "white" },
     secondary: { background: "#e5e7eb", color: "#1f2937" },
+    danger: { background: "#ef4444", color: "white" }, // New variant!
   };
-  // Add comment to invalidate cache
+
   return (
     <button
       className="bg-blue-500 bg-gray-200 text-gray-900"

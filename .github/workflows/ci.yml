@@ -1,15 +1,15 @@
-# TODO: Name the workflow "CI"
 name: CI
-# TODO: Set up trigger on:
 on:
   push:
     branches:
       - main
   pull_request:
-# TODO: Create 'build' job that runs on ubuntu-latest with steps:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,8 +26,16 @@ jobs:
           node-version: 20
           cache: "pnpm"
 
+      - name: Cache Turborepo
+        uses: actions/cache@v3
+        with:
+          path: node_modules/.cache/turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
       - name: Install dependencies
         run: pnpm install
 
       - name: Run build, lint, and test
-        run: turbo build lint test
+        run: pnpm turbo run build lint test

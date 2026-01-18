@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "../../../packages/ui/src/button";
 import { SnippetCard } from "../../../packages/ui/src/snippet-card";
 import { formatDate } from "../../../packages/utils/src/index";
+import Link from "next/dist/client/link";
 
 interface Snippet {
   id: number;
@@ -88,6 +89,9 @@ export default function Home() {
         {/* TODO: Add header div with flex layout */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold">My Snippets</h1>
+          <Button>
+            <Link href="http://localhost:3000">+ Go to App Project</Link>
+          </Button>
           <Button onClick={() => setShowModal(true)}>+ New Snippet</Button>
         </div>
         {showModal && (

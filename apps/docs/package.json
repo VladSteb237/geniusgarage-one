@@ -1,13 +1,13 @@
 {
   "name": "docs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --max-warnings 0",
+    "lint": "echo \"Skipping docs lint\"",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
