@@ -22,7 +22,7 @@
 export interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "danger"; // Add 'danger' variant
 }
 // Add comment
 export function Button({
@@ -43,6 +43,7 @@ export function Button({
   const variantStyles = {
     primary: { background: "#2563eb", color: "white" },
     secondary: { background: "#e5e7eb", color: "#1f2937" },
+    danger: { background: "#ef4444", color: "white" }, // New variant!
   };
 
   return (
